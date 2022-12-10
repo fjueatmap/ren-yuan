@@ -81,6 +81,53 @@
         display: flex;
         justify-content: center;
     }
+    .mo{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
+    }
+    .imgp{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
+    }
+    .m1{
+        border-color: gray;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 1%;
+        width: 40%;
+        position: absolute;
+        text-align: center;
+        color: white;
+        font-family: setofont;
+    }
+    .m1 li{
+        float: left;
+        margin-right:25px;
+        list-style-type: none;
+        font-size: 25px;
+    }
+    .imgb{
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <html>
 
@@ -93,11 +140,27 @@
     <script>
        $(document).ready(function(){
             $(".sub").slideUp(0)
+            $(".sub2").slideUp(0)
+            $(".imgb").slideUp(0)
             for(i = 0;i<$(".main").length;++i){
                 $(".main:eq("+i+")").click({id:i},function(e){
                     n=e.data.id
                     $(".sub:eq("+n+")").slideToggle();
                     $(".sub:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".mo").length;++i){
+                $(".mo:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".sub2:eq("+n+")").slideToggle();
+                    $(".sub2:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".imgp").length;++i){
+                $(".imgp:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".imgb:eq("+n+")").slideToggle();
+                    $(".imgb:not(:eq(" + n + "))").slideUp();
                 })
             }
             $("#menu").css("width",$(".main").length*100)
@@ -202,14 +265,85 @@
     <div id="自助餐" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">自助餐</div>
-		<p style=font-size:smaller:>按重量計錢，菜色眾多</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>每100公克  17元</li>
+                    <li>一碗飯  5元</li>
+                    <li>半碗飯  3元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>按重量計錢，菜色眾多</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="11.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="麵食部" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">麵食部</div>
-		<p style=font-size:smaller:>賣有各式價格低廉的料理及特調飲料</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>魯肉飯  小50/大60元</li>
+                    <li>肉燥麵  小40/大55元</li>
+                    <li>炸醬麵  小40/大55元</li>
+                    <li>餛飩麵  小40/大50元</li>
+                    <li>陽春麵  小40/大50元</li>
+                    <li>素食水餃/鍋貼  6.5元</li>
+                    <li>素麵  小30/大45元</li>
+                    <li>水餃5個  20元</li>
+                    <li>涼麵  小35/大50元</li>
+                    <li>酸辣湯餃7個  50元</li>
+                    <li>雞絲涼麵  小45/大60元</li>
+                    <li>紅油抄手  40元</li>
+                    <li>紅油抄手麵  小45/大60元</li>
+                    <li>榨菜肉絲麵  小40/大50元</li>
+                    <li>雞絲乾拌麵  小50/大65元</li>
+                    <li>特製乾拌麵  小40/大55元</li>
+                    <li>咖哩雞排飯  小80/大90元</li>
+                    <li>咖哩排骨飯  小80/大90元</li>
+                    <li>雞魯麵  小55/大70 飯 小60/大70元</li>
+                    <li>雞排麵  小55/大65 飯 小60/大65元</li>
+                    <li>雞絲麵  小45/大55 飯 50/大55</li>
+                    <li>排骨麵  小55/大65 飯 小60/大65</li>
+                    <li>酸辣麵  小40/大55 飯 小40/大50</li>
+                    <li>咖哩麵  小40/大55 飯 40/大50元</li>
+                    <li>餛飩肉燥麵  小50/大65 飯 小55/大65</li>
+                    <li>餛飩炸醬麵  小50/大65 飯 小55/大65</li>
+                    <li>燙青菜 25元</li>
+                    <li>油豆腐  20元</li>
+                    <li>皮蛋豆腐  25元</li>
+                    <li>扁食湯  35元</li>
+                    <li>扁食湯  35元</li>
+                    <li>酸辣湯  30元</li>
+                    <li>紫菜蛋花湯  20元</li>
+                    <li>榨菜肉絲湯  25元</li>
+                    <li>雪碧/可樂  20元</li>
+                    <li>無糖氣泡水/蘋果  20元</li>
+                    <li>紅茶/洛神  15元</li>
+                    <li>雪酪/雪檬  15元</li>
+                    <li>茉莉綠茶  15元</li>
+                    <li>檸檬紅茶  15元</li>
+                    <li>奶茶  20元</li>
+                    <li>奶綠  20元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>賣有各式價格低廉的料理及特調飲料</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="18.jpg" style="height:30% ;width: 30%;">
     </div>
     
 </body>
